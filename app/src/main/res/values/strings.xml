@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="fragment_news">News</string>
+    <string name="fragment_recreation">Rekreasi</string>
+    <string name="fragment_hospitals">Hospitals</string>
+    <string name="fragment_profile">About</string>
+    <string name="loading">Loading...</string>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:background="@drawable/bg_gradient_primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:fontFamily="@font/mmedium"
+                    android:textSize="@dimen/_15sdp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="News App Indonesia"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mregular"
+                    android:text="Cari Berita Seputar Indonesia"/>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_31sdp"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/colorUncheck">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:paddingLeft="@dimen/_10sdp"
+                       android:paddingRight="@dimen/_10sdp"
+                       android:paddingTop="@dimen/_10sdp"
+                       android:paddingBottom="@dimen/_15sdp"
+                       android:orientation="vertical">
+
+                       <ImageView
+                           android:layout_width="@dimen/_60sdp"
+                           android:layout_height="@dimen/_60sdp"
+                           android:src="@drawable/news_logo"
+                           android:layout_gravity="center"/>
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:layout_marginBottom="@dimen/_5sdp"
+                           android:fontFamily="@font/mregular"
+                           android:textSize="@dimen/_12sdp"
+                           android:textAppearance="?attr/textAppearanceHeadline6"
+                           android:text="Tentang Applikasi"/>
+
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:layout_marginBottom="2dp"
+                           android:background="@color/greyPrimary" />
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textAlignment="center"
+                               android:layout_marginTop="5dp"
+                               android:textSize="@dimen/_10sdp"
+                               android:fontFamily="@font/mlight"
+                               android:text="Versi 1.0"/>
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textAlignment="center"
+                               android:layout_marginTop="5dp"
+                               android:textSize="@dimen/_10sdp"
+                               android:fontFamily="@font/mlight"
+                               android:text="Developed By Tri Hariyadi"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="30dp"
+                               android:fontFamily="@font/mlight"
+                               android:layout_gravity="center"
+                               android:textSize="@dimen/_10sdp"
+                               android:text="Teknik Informatika \nUniversitas Pelita Bangsa \n@2021"
+                               android:textColor="#000"
+                               android:textAlignment="center" />
+
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_47sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/mmedium"
+                    android:textSize="@dimen/_11sdp"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="@color/red_accent"
+                    app:icon="@drawable/ic_email"
+                    app:iconPadding="10dp"
+                    app:iconGravity="textStart"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="Contact Me For Support" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

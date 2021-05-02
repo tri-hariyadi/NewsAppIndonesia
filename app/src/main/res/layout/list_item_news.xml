@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginLeft="9dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/colorUncheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/shadow">
+
+                <ProgressBar
+                    android:id="@+id/progressImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/imageNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/ic_image_list"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/border_bottom"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="0dp">
+
+                <TextView
+                    android:id="@+id/titleNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:fontFamily="@font/mmedium"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:id="@+id/publishedNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Secondary Text"
+                    android:fontFamily="@font/mregular"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+                <TextView
+                    android:id="@+id/descriptionNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/mregular"
+                    android:justificationMode="inter_word"
+                    tools:targetApi="o"
+                    android:text="Apa yang membuat orang ngantuk dan lapar saat puasa"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="#000"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="13dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLinkNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/ic_eye"
+                    android:fontFamily="@font/mmedium"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="Lihat Detail" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/googleMaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/mmedium"
+                    app:icon="@android:drawable/ic_dialog_map"
+                    app:iconPadding="10dp"
+                    app:iconGravity="textStart"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="Navigate With Google Maps" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

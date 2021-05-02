@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvHospitals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/colorUncheck">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_medical_services"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:id="@+id/hospitalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:fontFamily="@font/mmedium"
+                    android:textAppearance="?attr/textAppearanceHeadline6"/>
+                <TextView
+                    android:id="@+id/addressHospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Secondary Text"
+                    android:fontFamily="@font/mregular"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telp: "
+                        android:fontFamily="@font/mregular"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="#000"
+                        />
+                    <TextView
+                        android:id="@+id/phoneHospital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0645) 46334"
+                        android:fontFamily="@font/mregular"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="#000"
+                        />
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCallHospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/ic_phone_24"
+                    android:fontFamily="@font/mmedium"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="Hubungi" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

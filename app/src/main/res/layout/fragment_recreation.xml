@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".fragment.RecreationFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:background="@color/white">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="16dp"
+           android:orientation="horizontal"
+           android:weightSum="1"
+           android:background="@color/colorPrimary">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:textAppearance="?attr/textAppearanceHeadline6"
+               android:textColor="@color/white"
+               android:text="@string/fragment_recreation"/>
+
+           <ImageView
+               android:layout_width="24dp"
+               android:layout_height="24dp"
+               android:src="@android:drawable/ic_dialog_map"/>
+       </LinearLayout>
+
+       <RelativeLayout
+           android:id="@+id/loadingData"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:orientation="vertical"
+               android:gravity="center">
+               <ProgressBar
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:textSize="16dp"
+                   android:text="@string/loading"/>
+           </LinearLayout>
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:id="@+id/alertError"
+           android:visibility="gone"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center">
+
+           <ImageView
+               android:id="@+id/errorMood"
+               android:layout_width="150dp"
+               android:layout_height="150dp"
+               android:src="@drawable/ic_mood_bad"
+               android:layout_centerInParent="true"/>
+
+           <TextView
+               android:id="@+id/textError"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/mregular"
+               android:textColor="@color/black"
+               android:text="No Internet Connection \n Please check your internet connection"
+               android:layout_centerInParent="true"
+               android:textAlignment="center"
+               android:layout_below="@+id/errorMood"
+               android:textSize="18dp"/>
+
+       </RelativeLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rvRecreation"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scrollbars="vertical" />
+
+   </LinearLayout>
+
+</FrameLayout>
